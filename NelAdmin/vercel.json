@@ -1,4 +1,17 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/nel-admin"
+  "builds": [
+    {
+      "src": "nel-admin/angular.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "nel-admin/dist/nel-admin"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
