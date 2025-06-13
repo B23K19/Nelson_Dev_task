@@ -1,0 +1,31 @@
+<div class="flex justify-center min-h-screen items-center bg-gray-800">
+<div class="w-full max-w-xl mx-auto p-6 bg-white rounded shadow space-y-4">
+  <form [formGroup]="testForm" (ngSubmit)="submit()" class="space-y-4">
+    <div>
+      <input formControlName="email" placeholder="Email Address" type="email" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500
+placeholder-gray-400 placeholder-opacity-50" required />
+    </div>
+
+    <div>
+      <input formControlName="url" type="text" placeholder="API URL to Test" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500
+placeholder-gray-400 placeholder-opacity-50" required />
+    </div>
+
+    <div>
+      <input formControlName="data" placeholder="Word to test with" type="text" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500
+placeholder-gray-400 placeholder-opacity-50" required />
+    </div>
+
+    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition cursor-pointer">Submit</button>
+  </form>
+
+  <div *ngIf="response" class="mt-4 p-4 bg-gray-100 rounded">
+    <h3 class="font-bold">Response:</h3>
+    <pre>{{ wordRespond }}</pre>
+  </div>
+
+  <div *ngIf="error" class="mt-4 p-4 bg-red-100 rounded text-red-700">
+    <strong>Error:</strong> {{ error }}
+  </div>
+</div>
+</div>

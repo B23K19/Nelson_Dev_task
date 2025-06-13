@@ -1,0 +1,6 @@
+@NelAPI_HostAddress = http://localhost:5183
+
+GET {{NelAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
