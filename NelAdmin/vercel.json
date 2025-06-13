@@ -1,17 +1,10 @@
 {
-  "builds": [
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/nel-admin",
+  "rewrites": [
     {
-      "src": "nel-admin/angular.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "nel-admin/dist/nel-admin"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
