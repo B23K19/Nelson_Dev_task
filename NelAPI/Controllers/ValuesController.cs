@@ -28,7 +28,7 @@ namespace NelAPI.Controllers
             {
                 var sortedChars = input.data
                     .ToCharArray()
-                    .OrderBy(c => c)
+                    .OrderBy(c => char.ToLower(c))
                     .ToArray();
 
 
